@@ -608,6 +608,57 @@ body {
 /* #009586  #f24335 */
 /* end features */
 
+/* testimonials  */
+.testimonials {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--section-background);
+}
+.testimonials .main-title:hover {
+    border: 2px solid var(--section-background);
+
+}
+.testimonials .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+.testimonials .container .box {
+    position: relative;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 3px  #cfcfcf;
+    border-radius: 10px;
+}
+.testimonials .container .box .img-hldr{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    top: -50px;
+    right: -10px;
+    border: 10px solid var(--section-background); 
+}
+.testimonials .container .box h3{
+    font-size: 18px;
+    color: #222;
+}
+.testimonials .container .box p:first-of-type{
+    text-transform: capitalize;
+    margin-top: 5px;
+}
+.testimonials .container .box p {
+    color: #111;
+    font-weight: 300;
+    margin-top: 5px;
+}
+.testimonials .container .box .stars i{
+    color: #ffc107;
+    margin-top: 10px;
+}
+/* end testimonials  */
+
 /* animations */
 @keyframes up-and-down {
     0%, 100% {
