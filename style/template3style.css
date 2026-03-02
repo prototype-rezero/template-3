@@ -6,6 +6,9 @@
     --main-padding-top: 100px;
     --main-padding-bottom: 100px;
     --section-background: #ececec;
+    --quality-color: #f24335;
+    --time-color: #009586;
+    --passion-color: var(--main-color);
 }
 /* variables */
 
@@ -129,6 +132,7 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
 }
 .header .logo {
     color: var(--main-color);
@@ -357,8 +361,8 @@ body {
 }
 .articles .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 40px;
 }
 .articles .container .box {
     box-shadow: 0 0 20px #c2c2c270;
@@ -368,13 +372,13 @@ body {
 }
 .articles .container .box:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 20px #c0c0c070;
+    box-shadow: 0 0 20px #80808070;
 }
 .articles .container .box .content {
     padding: 20px;
 }
 .articles .container .box .content h3 {
-    font-size: 22px;
+    font-size: 20px;
     margin: 0 0 10px;
 }
 .articles .container .box .content p {
@@ -492,8 +496,8 @@ body {
     transform: skewY(-20deg);
     transition: var(--main-transition);
 }
-.features .container .box:hover .img-holder::after{
-    transform: skewY(20deg);
+.features .container .box .img-holder:hover:after{
+    transform: skewY(25deg);
 }
 .features .container .box h2 {
     font-size: 40px;
@@ -510,6 +514,10 @@ body {
     bottom: 0;
     transform: translateX(-50%);
     left: 50%;
+    transition: var(--main-transition);
+}
+.features .container .box:hover h2::after{
+    width: 90%;
 }
 .features .container .box p {
     color: #777;
@@ -527,8 +535,77 @@ body {
     border-radius: 7px;
     border: 3px solid var(--main-color);
     margin-top: 50px;
-
+    position: relative;
+    transition: var(--main-transition);
 }
+.features .container .box a::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    left: 0;
+    top: 0;
+    background-color: var(--main-color);
+    transition: width var(--main-transition);
+    z-index: -1;
+}
+.features .quality .img-holder::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f24335;
+    opacity: 0.5;    
+}
+.features .passion .img-holder::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    opacity: 0.5;    
+}
+.features .time .img-holder::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #009586;
+    opacity: 0.5;    
+}
+.features .container .quality h2::after {
+    background-color: #f24335;
+}
+.features .container .time h2::after {
+    background-color: #009586;
+}
+.features .container .box a:hover {
+    color:white;
+}
+.features .container .box a:hover::before {
+    width: 100%;
+}
+.features .container .quality a {
+    border-color: #f24335;
+    color: #f24335;
+}
+.features .container .time a {
+    border-color: #009586;
+    color: #009586;
+}
+.features .container .quality a::before {
+    background-color: var(--quality-color);
+}
+.features .container .time a::before {
+    background-color: var(--time-color);
+}
+/* #009586  #f24335 */
 /* end features */
 
 /* animations */
