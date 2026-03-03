@@ -672,12 +672,49 @@ body {
 .teammembers .container .box {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 20px;
+
+}
+.teammembers .container .box::before {
+    content:"";
+    position: absolute;
+    width: calc(100% - 60px);
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: #eeeeee;
+    z-index: -1;
+    border-radius: 10px;
+}
+.teammembers .container .box::after {
+    content:"";
+    position: absolute;
+    width: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: #dddddd;
+    z-index: -1;
+    border-radius: 10px;
+    transition: width var(--main-transition);
+}
+.teammembers .container .box:hover::after {
+    width: calc(100% - 60px);
 }
 .teammembers .container .box .content {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: center;    
+}
+.teammembers .container .box .content .img-holder {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: var(--main-transition);
+}
+.teammembers .container .box:hover .content .img-holder {
+    filter: grayscale(1);
 }
 .teammembers .container .box .content .links {
     width: 60px;
@@ -692,7 +729,26 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 18px;
+    color: #555;
+}
+.teammembers .container .box .info {
+    padding-left: 80px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+
+}
+.teammembers .container .box .info h3 {
+    font-size: 22px;
+    color: var(--main-color);
+}
+.teammembers .container .box .info p {
+    color: #555;
     font-size: 20px;
+    text-transform: capitalize;
 }
 /* end team members */
 
