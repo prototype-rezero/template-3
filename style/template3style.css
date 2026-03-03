@@ -629,6 +629,11 @@ body {
     background-color: white;
     box-shadow: 0 2px 3px  #cfcfcf;
     border-radius: 10px;
+        transition: var(--main-transition);
+}
+.testimonials .container .box:hover {
+    box-shadow: 0 0 20px  #cfcfcf;
+    transform: scale(1.025);
 }
 .testimonials .container .box .img-hldr{
     position: absolute;
@@ -730,7 +735,11 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 18px;
-    color: #555;
+    color: #777;
+    transition: var(--main-transition);
+}
+.teammembers .container .box .content .links a:hover {
+    color: var(--main-color);
 }
 .teammembers .container .box .info {
     padding-left: 80px;
