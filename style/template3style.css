@@ -761,6 +761,102 @@ body {
 }
 /* end team members */
 
+/* servivces */
+.services {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--section-background);
+}
+.services .main-title:hover {
+    border: 2px solid var(--section-background);
+}
+.services .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+.services .container .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 5px 20px #afafaf70;
+    transition: var(--main-transition);
+}
+.services .container .box:hover {
+    box-shadow: 0 5px 20px #afafaf;
+    transform: translateY(-10px);
+    position: relative;
+}
+.services .container .box::before {
+    content: "";
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--main-color);
+    transition: var(--main-transition);
+}
+.services .container .box:hover::before {
+    width: 100%;
+}
+.services .container .box .content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+}
+.services .container .box .content h3 {
+    font-size: 26px;
+    color: var(--main-color);
+}
+.services .container .box .content i {
+    color: #ddd;
+    font-size: 64px;
+}
+.services .container .box .info {
+    width: 100%;
+    text-align: right;
+    background-color: #f9f9f9;
+    padding: 15px 15px 15px 15px;
+    position: relative;
+} 
+.services .container .box .info::before {
+    content: "0" counter(services);
+    position: absolute;
+    background-color: var(--main-color);
+    color: white;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 90px;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+}
+.services .container .box .info::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 75px;
+    background-color: var(--section-background);
+    width: 50px;
+    height: 100%;    
+    transform: skewX(-30deg);
+
+}
+.services .container .box .info a {
+    font-size: 16px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+/* end servivces */
+
 /* animations */
 @keyframes up-and-down {
     0%, 100% {
