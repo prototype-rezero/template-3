@@ -79,6 +79,12 @@ body {
         width: 1170px;
     }
 }
+/* extra large */
+@media (min-width: 1400px) {
+    .container {
+        width: 1320px;
+    }
+}
 .main-title {
     margin: 0 auto 80px;
     border: 2px solid black;
@@ -87,7 +93,7 @@ body {
     width: fit-content;
     position: relative;
     z-index: 1;
-    transition: var(--main-transition);
+    transition: 0.2s;
     text-transform: uppercase;
 }
 .main-title::before, .main-title::after {
@@ -95,9 +101,9 @@ body {
     position: absolute;
     background-color: var(--main-color);
     top: 50%;
-    width: 12px;
-    height: 12px;    
-    border-radius: 50%;
+    width: 10px;
+    height: 10px;    
+    border-radius: 40%;
     transform: translateY(-50%);
 }
 .main-title::before {
@@ -155,6 +161,7 @@ body {
 }
 .header .main-nav{
     display: flex;
+    gap: 10px;
 }
 @media (max-width : 767px) {
     .header .main-nav {
@@ -169,6 +176,7 @@ body {
 .header .main-nav > li > a {
     display: flex;
     justify-content: center;
+    font-size: 18px;
     align-items: center;
     height: 72px;
     position: relative;
@@ -177,10 +185,19 @@ body {
     overflow: hidden;
     transition: var(--main-transition);
 }
-@media (max-width : 767px) {
+@media (max-width : 991px) {
     .header .main-nav > li > a {
-        padding: 10px 20px;
-        font-size: 13px;
+        padding: 0 15px;
+        font-size: 18px;
+    }
+}
+@media (max-width : 767px) {
+    .header .main-nav {
+        gap: 5px;
+    }
+    .header .main-nav > li > a {
+        padding: 10px 10px;
+        font-size: 14px;
         height: 40px;
 
     }
@@ -362,7 +379,7 @@ body {
 .articles .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 40px;
+    gap: 30px;
 }
 .articles .container .box {
     box-shadow: 0 0 20px #c2c2c270;
@@ -470,7 +487,7 @@ body {
 .features .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 40px;
+    gap: 30px;
 }
 .features .container .box {
     display: flex;
@@ -621,7 +638,7 @@ body {
 .testimonials .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 40px;
+    gap: 30px;
 }
 .testimonials .container .box {
     position: relative;
@@ -773,7 +790,7 @@ body {
 .services .container{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 40px;
+    gap: 30px;
 }
 .services .container .box {
     display: flex;
@@ -865,7 +882,7 @@ body {
 .skills .container {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 30px;
     align-items: center;
 }
 .skills .container .skillsvalues {
@@ -908,8 +925,114 @@ body {
 
 /* end skills */
 
+/* worksteps */
+.worksteps {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--section-background);
+}
+.worksteps .main-title:hover {
+    border: 2px solid var(--section-background);
+}
+.worksteps .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+}
+@media (max-width: 1199px) {
+    .worksteps .container {
+        flex-direction: column;
+    }
+}
+.worksteps .container .steps {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.worksteps .container .steps .step {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.worksteps .container .steps .step::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    background-color: rgb(194, 194, 194);
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.1;
+    transition: var(--main-transition);
+
+}
+.worksteps .container .steps .step:hover::before {
+    width: 102%;
+    height: 102%;
+}
+.worksteps .container .img-holder {
+    animation: up-and-down2 5s linear infinite;
+    position: relative;
+}
+
+@media (max-width: 767px) {
+    .worksteps .container .img-holder {
+        width: 80%;
+    } 
+    .worksteps .container .steps .step {
+        padding: 15px;
+    }
+}
+.worksteps .container .steps .step img {
+    width: 70px;
+}
+@media (max-width: 767px) {
+    .worksteps .container .steps .step img {
+        display: none;
+    }
+}
+.worksteps .container .steps .step .content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+@media (max-width: 767px) {
+    .worksteps .container .steps .step .content {
+        text-align: center;
+        gap: 5px;
+    }
+}
+.worksteps .container .steps .step .content h3 {
+    font-size: 24px;
+    color: var(--main-color);
+}
+.worksteps .container .steps .step .content p {
+    color: #777;
+    font-size: 20px;
+    line-height: 1.7;
+}
+/* end worksteps */
+
 /* animations */
 @keyframes up-and-down {
+    0%, 100% {
+        top: 0;
+    }
+    50% {
+        top: -50px;
+    }
+}
+@keyframes up-and-down2 {
     0%, 100% {
         top: 0;
     }
