@@ -1062,6 +1062,10 @@ body {
     border-radius: 10px;
     text-align: center;  
     width: 80px;
+    transition: var(--main-transition);
+}
+.events .container .info .time .unit:hover {
+    border: 1px solid var(--main-color);
 }
 .events .container .info .time .unit span {
     display: block;
@@ -1074,6 +1078,10 @@ body {
     color: var(--main-color);
     font-weight: bold;
     padding: 20px 0;
+    transition: var(--main-transition);
+}
+.events .container .info .time .unit:hover span:first-child{
+    border-bottom: 1px solid var(--main-color);
 }
 .events .container .info .content {
     display: flex;
@@ -1101,7 +1109,7 @@ body {
     background-color: #f6f5f5;
     padding: 30px 40px;
     border-radius: 60px;
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
 }
 .events .container .sub form input:first-child {
@@ -1113,13 +1121,51 @@ body {
     width: 70%;
     text-transform: capitalize;
 }
-.events .container .sub form input:nth-child(2) {
+.events .container .sub form input:last-child {
     font-size: 20px;
     background-color: var(--main-color);
     padding: 20px 20px;
     color: white;
     border-radius: 35px;
     font-weight: bold;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+.events .container .sub form input:last-child:hover {
+    background-color: var(--main-color-alt);
+}
+@media (max-width: 991px) {
+    .events .container .main-contnet img {
+        display: none;
+    }
+    .events .container .sub form {
+        width: 100%;
+    }
+}
+@media (max-width: 767px) {
+    .events .container{
+        gap: 30px;
+    }
+    .events .container .sub form {
+        width: 90%;
+        border-radius: 0px;
+        gap: 15px;
+        padding: 15px;
+        border-radius: 30px;
+        align-items: center;
+    }
+    .events .container .sub form input:first-child {
+        width: 70%;
+        font-size: 16px;
+        padding: 10px 15px;
+        border-radius: 20px;
+    }
+    .events .container .sub form input:last-child {
+        font-size: 16px;
+        padding: 0;
+        border-radius: 20px;
+        padding: 10px;
+    }
 }
 /* end events */
 
