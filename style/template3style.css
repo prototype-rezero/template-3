@@ -1199,7 +1199,7 @@ body {
     overflow: hidden;
 }
 .pricing .container .plan:nth-child(2) {
-    animation: up-down 1s infinite linear;
+    animation: up-down 3s infinite linear;
 }
 .pricing .container .plan .label {
     background-color: var(--main-color);
