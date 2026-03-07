@@ -22,10 +22,6 @@
     text-decoration: none;
     border: none;
     outline: none;
-    text-box-trim: both;
-    text-rendering: optimizeSpeed;
-    text-box-edge: cap alphabetic;
-
 }
 
 img,
@@ -57,6 +53,7 @@ body {
   min-height: 100vh;
   font-family: "cairo", sans-serif;
 }
+
 .container {
     padding-left: 20px;
     padding-right: 20px;
@@ -1295,6 +1292,81 @@ body {
     color: white;
 }
 /* end pricing */
+
+/* stats */
+.stats {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-image: url(../resources/stats.jpg);
+    background-size: cover;
+    position: relative;
+}
+.stats::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+}
+@scope (.stats) to (.stats-container)  {
+    .container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    }
+}
+.stats .container h3 {
+    font-size: 40px;
+    z-index: 2;
+    text-align: center;
+    line-height: 1
+}
+.stats .container .stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    z-index: 2;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+}
+.stats .container .stats-container .stat {
+    display: grid;
+    grid-template-rows: subgrid;
+    justify-items: center;
+    grid-row: span 3;
+    gap: 0px;
+    background-color: white;
+    padding:30px 0;
+    color: #333;
+    box-shadow: 0 0 20px #dfdfdfbd; 
+    transition: var(--main-transition);
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+    .stats .container .stats-container .stat:last-child {
+        grid-column: 2;
+    }
+}
+.stats .container .stats-container .stat:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #80808063;
+}
+.stats .container .stats-container .stat i {
+    font-size: 32px;
+}
+.stats .container .stats-container .stat span {
+    font-size: 50px;
+    font-weight: bold;
+}
+.stats .container .stats-container .stat p {
+    font-size: 20px;
+    color: var(--main-color);
+    font-weight: bold;
+    font-style: italic;
+}
+/* end stats */
 /* animations */
 @keyframes up-and-down {
     0%, 100% {
