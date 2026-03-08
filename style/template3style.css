@@ -1457,7 +1457,12 @@ body {
     cursor: pointer;
     transition: var(--main-transition);
 }
-/* enddiscount */
+discountcontainer .secondhalf form input[type="submit"]:hover {
+    transform : scale(1.01)
+    background-color: var(--main-color-alt);
+    color: white;
+}
+/* end discount */
 
 /* animations */
 @keyframes up-and-down {
