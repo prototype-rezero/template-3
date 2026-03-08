@@ -1395,6 +1395,7 @@ body {
     position: relative;
     color: white;
     text-align: center;
+    padding; 20px;
 }
 .discountcontainer .firsthalf::before {
     content: "";
@@ -1428,7 +1429,7 @@ body {
     align-items: center;
     justify-content: center;
     flex: 1;
-    padding: 150px;
+    padding: 20px;
 }
 
 .discountcontainer .secondhalf form {
