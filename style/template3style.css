@@ -1456,7 +1456,7 @@ body {
 .discountcontainer .secondhalf form input[type="submit"] {
     display: block;
     width: 100%;
-    padding: 20px;
+    padding: 0 20px;
     background-color: var(--main-color);
     color: white;
     font-weight: bold;
@@ -1464,6 +1464,8 @@ body {
     border: none;
     cursor: pointer;
     transition: var(--main-transition);
+    text-align: center;
+    line-height: 50px;
 }
 discountcontainer .secondhalf form input[type="submit"]:hover {
     transform : scale(1.01)
