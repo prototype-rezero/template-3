@@ -1367,6 +1367,98 @@ body {
     font-style: italic;
 }
 /* end stats */
+
+/* discount */
+.discountcontainer {
+    display: flex;
+    align-items: center;
+    gap: 0;
+
+}
+.discountcontainer .firsthalf {
+        min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-basis: 50%;
+    background-image: url(../resources/discount-background1.jpg);
+    animation: backgroundchange 20s infinite;
+    background-size: cover;
+    position: relative;
+    color: white;
+    padding: 0 150px;
+    text-align: center;
+}
+.discountcontainer .firsthalf::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--main-color);
+    opacity: 0.95;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+.discountcontainer .firsthalf h3 {
+    font-size: 40px;
+    line-height: 1;
+    z-index: 2;
+}
+.discountcontainer .firsthalf p {
+    font-size: 18px;
+    z-index: 2;
+}
+.discountcontainer .firsthalf img{
+    width:60%;
+    z-index: 2;
+}
+.discountcontainer .secondhalf {
+        min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 150px;
+}
+
+.discountcontainer .secondhalf form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 300px;
+}
+.discountcontainer .secondhalf form textarea {
+    background-color: #eee;
+    height: 400px;
+    width: 100%;
+    resize: none;
+    padding: 15px;
+} 
+.discountcontainer .secondhalf form input {
+    background-color: #eee;
+    height: 50px;
+    padding: 15px;
+    width: 100%;
+}
+.discountcontainer .secondhalf form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+/* enddiscount */
+
 /* animations */
 @keyframes up-and-down {
     0%, 100% {
@@ -1445,6 +1537,14 @@ body {
     }
     50% {
         bottom: 20px;
+    }
+}
+@keyframes backgroundchange {
+    0%, 100% {
+        background-image: url(../resources/discount-background1.jpg);
+    }
+    50% {
+        background-image: url(../resources/discount-background2.jpg);
     }
 }
 /* end animations */
