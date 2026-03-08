@@ -1430,6 +1430,7 @@ body {
     justify-content: center;
     flex: 1;
     padding: 20px;
+    background-color: #eee;
 }
 
 .discountcontainer .secondhalf form {
@@ -1447,7 +1448,7 @@ body {
     padding: 15px;
 } 
 .discountcontainer .secondhalf form input {
-    background-color: #eee;
+    background-color: #ddd;
     height: 50px;
     padding: 15px;
     width: 100%;
