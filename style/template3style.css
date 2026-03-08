@@ -1375,6 +1375,11 @@ body {
     gap: 0;
 
 }
+@media (max-width: 991px) {
+.discountcontainer {
+    flex-direction: column;
+    gap: 0;
+}
 .discountcontainer .firsthalf {
         min-height: 100vh;
     display: flex;
@@ -1388,7 +1393,6 @@ body {
     background-size: cover;
     position: relative;
     color: white;
-    padding: 0 150px;
     text-align: center;
 }
 .discountcontainer .firsthalf::before {
@@ -1409,14 +1413,15 @@ body {
 }
 .discountcontainer .firsthalf p {
     font-size: 18px;
+    max-width: 500px;
     z-index: 2;
 }
 .discountcontainer .firsthalf img{
-    width:60%;
+    width:50%;
     z-index: 2;
 }
 .discountcontainer .secondhalf {
-        min-height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
