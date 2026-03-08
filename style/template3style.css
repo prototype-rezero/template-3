@@ -1380,6 +1380,7 @@ body {
     flex-direction: column;
     gap: 0;
 }
+}
 .discountcontainer .firsthalf {
         min-height: 100vh;
     display: flex;
