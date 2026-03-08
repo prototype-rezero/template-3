@@ -1395,7 +1395,7 @@ body {
     position: relative;
     color: white;
     text-align: center;
-    padding; 20px;
+    padding: 20px;
 }
 .discountcontainer .firsthalf::before {
     content: "";
@@ -1468,7 +1468,7 @@ body {
     line-height: 50px;
 }
 discountcontainer .secondhalf form input[type="submit"]:hover {
-    transform : scale(1.01)
+    transform : scale(1.01);
     background-color: var(--main-color-alt);
     color: white;
 }
