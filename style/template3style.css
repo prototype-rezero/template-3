@@ -1409,7 +1409,7 @@ body {
     height: 100%;
 }
 .discountcontainer .firsthalf h3 {
-    font-size: 40px;
+    font-size: 38px;
     line-height: 1;
     z-index: 2;
 }
@@ -1419,8 +1419,15 @@ body {
     z-index: 2;
 }
 .discountcontainer .firsthalf img{
-    width:50%;
+    width: 350px;
     z-index: 2;
+}
+@media (max-width: 991px) {
+    .discountcontainer .firsthalf {
+         width: 100%;
+        padding: 40px 20px;
+        min-height: fit-content;
+    }
 }
 .discountcontainer .secondhalf {
     min-height: 100vh;
@@ -1430,9 +1437,21 @@ body {
     justify-content: center;
     flex: 1;
     padding: 20px;
-    background-color: #eee;
+    gap: 30px;
 }
 
+@media (max-width: 991px) {
+    .discountcontainer .secondhalf {
+        width: 100%;
+        padding: 40px 20px;
+        min-height: fit-content;
+    }
+}
+.discountcontainer .secondhalf h3 {
+    font-size: 38px;
+    line-height: 1;
+    text-align: center;
+}
 .discountcontainer .secondhalf form {
     display: flex;
     flex-direction: column;
@@ -1441,17 +1460,19 @@ body {
     width: 300px;
 }
 .discountcontainer .secondhalf form textarea {
-    background-color: #eee;
-    height: 400px;
+    background-color: #fafafa;
+    height: 200px;
     width: 100%;
     resize: none;
     padding: 15px;
+    border-bottom: 2px solid #ddd;
 } 
 .discountcontainer .secondhalf form input {
-    background-color: #ddd;
+    background-color: #fafafa;
     height: 50px;
     padding: 15px;
     width: 100%;
+        border-bottom: 2px solid #ddd;
 }
 .discountcontainer .secondhalf form input[type="submit"] {
     display: block;
@@ -1467,7 +1488,7 @@ body {
     text-align: center;
     line-height: 50px;
 }
-discountcontainer .secondhalf form input[type="submit"]:hover {
+.discountcontainer .secondhalf form input[type="submit"]:hover {
     transform : scale(1.01);
     background-color: var(--main-color-alt);
     color: white;
